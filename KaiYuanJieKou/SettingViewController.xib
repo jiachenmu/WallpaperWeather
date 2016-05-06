@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FZMWFont.ttf">
+            <string>FZMWJW--GB1-0</string>
+            <string>FZMWJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="addCityBtn" destination="kRU-zC-8JU" id="dRf-7y-bNH"/>
+                <outlet property="showTableView" destination="H0x-Kh-WX3" id="caX-68-1O5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SettingBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-Bb-EyM">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击X即可删除已选择的城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-m9-Wmj">
+                    <rect key="frame" x="138" y="40" width="326" height="30"/>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-Kh-WX3">
+                    <rect key="frame" x="0.0" y="96" width="600" height="504"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LfB-mt-VQE"/>
+                        <outlet property="delegate" destination="-1" id="MWq-n6-22Q"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRU-zC-8JU">
+                    <rect key="frame" x="222" y="283" width="157" height="35"/>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="20"/>
+                    <state key="normal" title="先去添加城市去✙">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="addCity:" destination="-1" eventType="touchUpInside" id="dYy-MG-vkh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-59-pSk">
+                    <rect key="frame" x="269" y="506" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="dCu-d2-CAW"/>
+                        <constraint firstAttribute="height" constant="64" id="yWa-9C-BP4"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="returnToFront:" destination="-1" eventType="touchUpInside" id="Q2B-ds-ISs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Uee-m9-Wmj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="43V-iR-om9"/>
+                <constraint firstAttribute="trailing" secondItem="H0x-Kh-WX3" secondAttribute="trailing" id="5Mw-Y5-Eex"/>
+                <constraint firstItem="H0x-Kh-WX3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Uv-dU-wyV"/>
+                <constraint firstAttribute="bottom" secondItem="mdf-Bb-EyM" secondAttribute="bottom" id="C2X-av-8hn"/>
+                <constraint firstItem="mdf-Bb-EyM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Esp-HZ-fOL"/>
+                <constraint firstAttribute="trailing" secondItem="mdf-Bb-EyM" secondAttribute="trailing" id="GwL-wp-Mfc"/>
+                <constraint firstAttribute="bottom" secondItem="mdf-Bb-EyM" secondAttribute="bottom" id="NKS-0U-6qk"/>
+                <constraint firstAttribute="bottom" secondItem="H0x-Kh-WX3" secondAttribute="bottom" id="XjW-ND-H6F"/>
+                <constraint firstItem="Uee-m9-Wmj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="YpA-M5-a9N"/>
+                <constraint firstAttribute="trailing" secondItem="mdf-Bb-EyM" secondAttribute="trailing" id="aCa-gw-x4J"/>
+                <constraint firstItem="H0x-Kh-WX3" firstAttribute="top" secondItem="Uee-m9-Wmj" secondAttribute="bottom" constant="26" id="aoh-Ot-oYc"/>
+                <constraint firstItem="t6Z-59-pSk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="buc-I6-ei1"/>
+                <constraint firstItem="mdf-Bb-EyM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fcV-ca-oui"/>
+                <constraint firstAttribute="bottom" secondItem="t6Z-59-pSk" secondAttribute="bottom" constant="30" id="gst-GQ-Woq"/>
+                <constraint firstItem="kRU-zC-8JU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="0.5" id="j2g-QL-vrh"/>
+                <constraint firstItem="mdf-Bb-EyM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qej-dc-VIc"/>
+                <constraint firstItem="kRU-zC-8JU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="yVc-ey-vLB"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="C2X-av-8hn"/>
+                    <exclude reference="Esp-HZ-fOL"/>
+                    <exclude reference="aCa-gw-x4J"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="770" y="410"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vc4-Gk-Jpa">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="1360" y="577.5"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="SettingBackgroundImage" width="540" height="960"/>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>

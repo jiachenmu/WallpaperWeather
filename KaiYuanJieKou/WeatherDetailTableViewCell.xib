@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeatherDetailTableViewCellID" rowHeight="80" id="KGk-i7-Jjw" customClass="WeatherDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="491" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-uG-JFd">
+                        <rect key="frame" x="10" y="10" width="60" height="66"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="faR-pa-sWt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-R1-5Rv">
+                        <rect key="frame" x="304" y="32" width="119" height="21"/>
+                        <attributedString key="attributedText">
+                            <fragment content="风力大小之类的">
+                                <attributes>
+                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="17" name="PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="sNM-uG-JFd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5Ks-dW-ipg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="d4f-R1-5Rv" secondAttribute="trailing" constant="40" id="BYc-yw-g2K"/>
+                    <constraint firstItem="d4f-R1-5Rv" firstAttribute="centerY" secondItem="sNM-uG-JFd" secondAttribute="centerY" id="HNC-PY-zkH"/>
+                    <constraint firstItem="sNM-uG-JFd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="T0P-Tt-NVY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="d4f-R1-5Rv" secondAttribute="trailing" constant="60" id="aQQ-xl-ol3"/>
+                    <constraint firstItem="d4f-R1-5Rv" firstAttribute="leading" secondItem="sNM-uG-JFd" secondAttribute="trailing" constant="15" id="eMP-CY-2kf"/>
+                    <constraint firstAttribute="bottom" secondItem="sNM-uG-JFd" secondAttribute="bottom" constant="10" id="vgh-w5-v4n"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="BYc-yw-g2K"/>
+                        <exclude reference="eMP-CY-2kf"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="iconView" destination="sNM-uG-JFd" id="uGg-z7-BUz"/>
+                <outlet property="titleLabel" destination="d4f-R1-5Rv" id="oMV-vn-i1O"/>
+            </connections>
+            <point key="canvasLocation" x="245.5" y="453.5"/>
+        </tableViewCell>
+    </objects>
+</document>

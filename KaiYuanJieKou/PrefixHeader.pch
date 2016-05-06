@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  KaiYuanJieKou
+//
+//  Created by jiachen on 16/4/18.
+//  Copyright © 2016年 jiachenmu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - 第三方框架
+// -MARK: JSON 相关
+#import <MJExtension.h>
+// -MARK: 加载圆圈
+#import "MBProgressHUD.h"
+
+// -MARK: 代码相关
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define WeakSelf __weak typeof(self) weakSelf = self
+#define DefaultFont(o) [UIFont fontWithName:@"FZMWJW--GB1-0" size:o]  //默认字体  卡哇伊😄
+#import "CityManager.h"
+#import "CityModel.h"
+#import "CMNetworkManager.h"
+#import "UIColor+HexColor.h"
+#import "TipView.h"
+
+// -MARK: 用户存储相关
+#define IsFirstStartKey         @"IsFirstStartKey"          //是否第一次启动app
+#define UserSelectedCityListKey @"UserSelectedCityListKey"  //用户已经选择的城市列表
+#define HotCityListKey          @"HotCityListKey"           //热门城市列表
+
+
+// -MARK: 关于作者
+#define GithubURL    @"jianshu://users/232094594d02/latest_articles"
+#define MyJianShuURL @"http://www.jianshu.com/users/232094594d02/latest_articles"
+
+
+#endif /* PrefixHeader_pch */

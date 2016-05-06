@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectAddressController">
+            <connections>
+                <outlet property="searchBar" destination="t1d-wb-nVf" id="LnI-mc-Zwq"/>
+                <outlet property="tableView" destination="elD-rK-gYw" id="TO0-SA-epu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="elD-rK-gYw">
+                    <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JUf-Jr-fep"/>
+                        <outlet property="delegate" destination="-1" id="g7I-cC-lpl"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="输入城市查询啦😄" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1d-wb-nVf">
+                    <rect key="frame" x="10" y="32" width="580" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="AMP-lQ-Vap"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.23921568627450981" green="0.30980392156862746" blue="0.41568627450980394" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="t3d-Em-9Dg"/>
+                    </connections>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elz-3F-7H9">
+                    <rect key="frame" x="268" y="496" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Zhi-MT-o6T"/>
+                        <constraint firstAttribute="width" constant="64" id="kg1-a6-B1l"/>
+                    </constraints>
+                    <state key="normal" title="返回" image="return"/>
+                    <connections>
+                        <action selector="backToFront:" destination="-1" eventType="touchUpInside" id="gRq-pJ-MIg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.30588235294117649" green="0.38823529411764707" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="t1d-wb-nVf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="64" id="3eP-u5-GH4"/>
+                <constraint firstAttribute="bottom" secondItem="elD-rK-gYw" secondAttribute="bottom" id="8LD-dM-XqW"/>
+                <constraint firstItem="elD-rK-gYw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="128" id="8ds-ql-DXR"/>
+                <constraint firstAttribute="trailing" secondItem="t1d-wb-nVf" secondAttribute="trailing" constant="10" id="FI6-Ex-cTK"/>
+                <constraint firstItem="t1d-wb-nVf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="FOt-bj-Wcd"/>
+                <constraint firstItem="elD-rK-gYw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LQz-UO-L7u"/>
+                <constraint firstItem="t1d-wb-nVf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="TY2-QH-IYD"/>
+                <constraint firstItem="elD-rK-gYw" firstAttribute="top" secondItem="t1d-wb-nVf" secondAttribute="bottom" constant="32" id="TbL-37-H16"/>
+                <constraint firstAttribute="bottom" secondItem="Elz-3F-7H9" secondAttribute="bottom" constant="40" id="abr-fi-EPu"/>
+                <constraint firstItem="t1d-wb-nVf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="64" id="aq2-QA-Ai2"/>
+                <constraint firstItem="t1d-wb-nVf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="b97-3H-pCh"/>
+                <constraint firstItem="Elz-3F-7H9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="cbX-lG-j5s"/>
+                <constraint firstAttribute="trailing" secondItem="elD-rK-gYw" secondAttribute="trailing" id="cbq-1z-mkY"/>
+                <constraint firstAttribute="bottom" secondItem="elD-rK-gYw" secondAttribute="bottom" id="fhd-og-CdD"/>
+                <constraint firstItem="elD-rK-gYw" firstAttribute="top" secondItem="t1d-wb-nVf" secondAttribute="bottom" constant="10" id="nee-FA-RCF"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="3eP-u5-GH4"/>
+                    <exclude reference="aq2-QA-Ai2"/>
+                    <exclude reference="b97-3H-pCh"/>
+                    <exclude reference="8LD-dM-XqW"/>
+                    <exclude reference="8ds-ql-DXR"/>
+                    <exclude reference="nee-FA-RCF"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>
