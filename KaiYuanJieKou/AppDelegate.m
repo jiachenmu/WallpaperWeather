@@ -66,14 +66,19 @@
 
 // - MARK: 是否第一次启动，如果是 则配置热门城市列表
 - (void)setInitData{
-    BOOL isFirstStart = ( (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:IsFirstStartKey] ).boolValue;
-    if (isFirstStart) {
+    BOOL isFirstStart;
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstStartKey];
+    if (obj == nil) {
+        isFirstStart = true;
+    }else {
+        isFirstStart = false;
+    }
+
+    if (isFirstStart ) {
         //配置热门城市列表
         [[CityManager shareInstance] setUpHotCityList];
         isFirstStart = false;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:isFirstStart] forKey:IsFirstStartKey];
     }
-    //配置热门城市列表
-    [[CityManager shareInstance] setUpHotCityList];
 }
 @end

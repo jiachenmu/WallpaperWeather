@@ -36,7 +36,7 @@
 
 
 // -MARK: 关于作者
-#define GithubURL    @"jianshu://users/232094594d02/latest_articles"
+#define GithubURL    @"https://github.com/jiachenmu/WallpaperWeather/tree/master"
 #define MyJianShuURL @"http://www.jianshu.com/users/232094594d02/latest_articles"
 
 
